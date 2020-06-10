@@ -15,7 +15,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 * OMDB
 * Bands in Town
 
-**LIRI uses the following commands:**
+## LIRI uses the following commands:
 `<concert-this>`
 * Name of the venue
 * Venue location
