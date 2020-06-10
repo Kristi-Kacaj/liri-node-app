@@ -31,3 +31,15 @@ function liriRun (command, userInput) {
             console.log("Please try again.")
     }
 };
+
+//Function to search Bands in Town API
+function getConcert(artist) {
+    let artist = userInput;
+    let concertQueryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+
+    axios.get(concertQueryURL).then(function (response) {
+        console.log("Name of the Venue: " + response.data[0].venue.name + "\r\n");
+        console.log("Venue Location: " + response.data[0].venue.city + "\r\n");
+        console.log("Date of Event: " + moment(response.data[0].datatime).format("MM-DD-YYYY") + "\r\n");
+    })
+};
